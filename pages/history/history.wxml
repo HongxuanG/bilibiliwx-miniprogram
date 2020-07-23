@@ -1,0 +1,31 @@
+<wxs module="tools" src="../../pages/filter/tools.wxs"></wxs>
+<nav-bar type="2" title="历史记录"></nav-bar>
+<view class="historyList" wx:if="{{historyRecord.length!=0}}">
+    <block wx:for="{{historyRecord}}" wx:key="index">
+        <view class="historyItem" bindtap="goDetail" data-aid="{{item.video.aid}}">
+            <view class="video-img">
+				<image src="{{item.video.pic}}"></image>
+			</view>
+            <view class="video-info">
+				<text class="title txt-cut">{{item.video.title}}</text>
+				<view class="tag">
+					<view class="tag-box" wx:if="{{item.video.hot_desc}}">
+						<text>{{item.video.hot_desc}}</text>
+					</view>
+				</view>
+				<view class="up_name">
+					<text class="iconfont icon-UPzhu"></text> 
+					<text>{{item.video.author.name}}</text>
+				</view>
+				<view class="video-msg">
+					<view class="day">
+						<text>{{tools.fullDateFormat(item.dateTime)}}</text>
+					</view>
+				</view>
+			</view>
+        </view>
+    </block>
+    
+</view>
+<view class="editBtn" bindtap="edit" wx:if="{{historyRecord.length!=0}}">编辑</view> 
+<empty item="{{historyRecord}}"></empty>

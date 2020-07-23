@@ -1,0 +1,156 @@
+<wxs module="tools" src="../filter/tools.wxs" />
+<!-- 顶部导航 -->
+<nav-bar></nav-bar>
+<view style="height:90px;position:relative;z-index:99;">
+	<view class="fixedLayout" style="top:{{height}}px">
+		<view class="search-bar">
+			<view class="search" bindtap="goSearch">
+				<icon class="icon-small" type="search" size="14"></icon>
+				<input type="text" class="search-input"></input>
+			</view>
+		</view>
+		<view class="select-item">
+			<block wx:for="{{select_item}}" wx:key="index">
+				<view class="{{index==currentIndex?'active':''}}" bindtap="changeSelect" data-idx="{{index}}">
+					<text>{{item.name}}</text>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>
+<view class="content">
+<!-- 热门部分 -->
+	<view class="hotList" hidden="{{currentIndex!=0}}">
+		
+		<loading wx:if="{{hotList.length==0}}"></loading>
+		<block wx:for="{{hotList}}" wx:key="index" >
+			<videoCard video="{{item}}"  transmit></videoCard>
+		</block>
+	</view>
+<!-- 追番部分 -->
+	<view class="animation" hidden="{{currentIndex!=1}}">
+		<view class="timeline">
+			<view class="weekline clearfix">
+				<block wx:for="{{timelineList}}" wx:key="index">
+					<view class="{{clickIndex==index?'active':''}} day_of_week {{item.is_today==1?'today':''}}" bindtap="onActive" data-idx="{{index}}">
+						{{clickIndex==index?'周':''}}{{tools.weekFormat(item.day_of_week)}}
+					</view>
+				</block>
+			</view>
+			<view class="timeline-body clearfix">
+				<block wx:for="{{timelineList}}" wx:key="index">
+					<view class="" wx:if="{{clickIndex==index}}">
+						<block wx:for="{{item.episodes}}" wx:for-index="i" wx:for-item="itm" wx:key="i">
+							<view class="anime-item">
+								<view class="anime_img">
+									<image src="{{itm.square_cover}}" lazy-load="{{true}}"></image>
+								</view>
+								<view class="context">
+									<view class="title txt-cut">{{itm.title}}</view>
+									<view class="pub_index one-txt-cut">{{itm.pub_index}}</view>
+								</view>
+							</view>
+						</block>
+					</view>
+				</block>
+			</view>
+		</view>
+		<!-- <block wx:for="{{bangumi}}" wx:key="index">
+			<view class="bangumi">
+				<view class="b-header">
+					<text class="title">{{item.title}}</text>
+					<view class="more" wx:if="{{index==0}}">查看更多<text class="iconfont icon-you"></text></view>
+				</view>
+				<view class="b-body">
+					<view class="b-content clearfix">
+						<block wx:for="{{tools.grouping(item.items,item.size,animeIndex)}}" wx:for-index="idx" wx:for-item="children" wx:key="idx">
+							<view class="activity" wx:if="{{index==0}}">
+								<view class="activity-title">{{children.title}}</view>
+							</view>
+							<view class="card"  wx:if="{{index!=0}}">
+								<view class="card-image">
+									<image src="{{children.cover}}">
+										<cover-view class="tag" wx:if="{{children.badge}}">{{children.badge}}</cover-view>
+										<cover-view class="number">{{children.stat.follow_view}}</cover-view>
+									</image>
+								</view>
+								<view class="card-context">
+									<view class="card-title txt-cut">{{children.title}}</view>
+									<view class="card-page-index one-txt-cut">{{children.desc}}</view>
+								</view>
+							</view>
+						</block>
+					</view>
+					<view class="change" wx:if="{{index!=0}}" bindtap="changeList" data-idx="{{index}}"><text class="iconfont icon-huanyihuan"></text>换一换</view>
+				</view>
+			</view>
+		</block> -->
+		<view class="bangumi">
+			<view class="b-header">
+				<text class="title">{{bangumi[0].title}}</text>
+				<view class="more" bindtap="goCategory">查看更多<text class="iconfont icon-you"></text></view>
+			</view>
+			<view class="b-body">
+				<view class="b-content clearfix">
+					<block wx:for="{{bangumi[0].items}}" wx:key="index">
+						<view class="activity" bindtap="indexCategory">
+							<view class="activity-title">{{item.title}}</view>
+						</view>
+					</block>
+				</view>
+			</view>
+		</view>
+		<view class="bangumi">
+			<view class="b-header">
+				<text class="title">{{bangumi[1].title}}</text>
+			</view>
+			<view class="b-body">
+				<view class="b-content clearfix">
+					<!-- 过滤器 分组 -->
+					<block wx:for="{{tools.grouping(animeList,bangumi[1].size,animeIndex)}}" wx:for-index="idx" wx:for-item="children" wx:key="idx">
+						<!-- <view class="card">
+							<view class="card-image">
+								<image src="{{children.cover}}">
+									<cover-view class="tag" wx:if="{{children.badge}}">{{children.badge}}</cover-view>
+									<cover-view class="number">{{children.stat.follow_view}}</cover-view>
+								</image>
+							</view>
+							<view class="card-context">
+								<view class="card-title txt-cut">{{children.title}}</view>
+								<view class="card-page-index one-txt-cut">{{children.desc}}</view>
+							</view>
+						</view> -->
+						<cartoonCard video="{{children}}"></cartoonCard>
+					</block>
+				</view>
+				<view class="change" bindtap="changeList" data-idx="1"><text class="iconfont icon-huanyihuan" id="changeIcon"></text>换一换</view>
+			</view>
+		</view>
+		<view class="bangumi">
+			<view class="b-header">
+				<text class="title">{{bangumi[2].title}}</text>
+			</view>
+			<view class="b-body">
+				<view class="b-content clearfix">
+					<!-- 过滤器 分组 -->
+					<block wx:for="{{tools.grouping(guocList,bangumi[2].size,goucIndex)}}" wx:for-index="idx" wx:for-item="children" wx:key="idx">
+						<!-- <view class="card">
+							<view class="card-image">
+								<image src="{{children.cover}}">
+									<cover-view class="tag" wx:if="{{children.badge}}">{{children.badge}}</cover-view>
+									<cover-view class="number">{{children.stat.follow_view}}</cover-view>
+								</image>
+							</view>
+							<view class="card-context">
+								<view class="card-title txt-cut">{{children.title}}</view>
+								<view class="card-page-index one-txt-cut">{{children.desc}}</view>
+							</view>
+						</view> -->
+						<cartoonCard video="{{children}}"></cartoonCard>
+					</block>
+				</view>
+				<view class="change" bindtap="changeList" data-idx="2" ><text class="iconfont icon-huanyihuan" id="changeIcon"></text>换一换</view>
+			</view>
+		</view>
+	</view>
+</view>

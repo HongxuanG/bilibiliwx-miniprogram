@@ -1,0 +1,4 @@
+<view class="emptyStatus" wx:if="{{item.length==0}}">
+	<image src="../../images/empty.png"></image>
+	<text>这里什么都没有</text>
+</view>

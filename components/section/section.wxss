@@ -1,0 +1,98 @@
+/* components/section/section.wxss */
+.section{
+    border-bottom: 1px solid #e7e7e7;
+}
+.section .body{
+  padding-left: 11px;
+}
+.section .header{
+  height: 50px;
+  padding: 12px;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+.section .header .section-title{
+    float: left;
+    color: #212121;
+    font-size: 14px;
+}
+.section .header .section-detail{
+    float: right;
+    font-size: 14px;
+    color: #999999;
+}
+.section .header .section-detail .tag{
+
+}
+.section .header .section-detail .icon-you{
+
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* 阿里矢量图标 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1938703 */
+  src: url('//at.alicdn.com/t/font_1938703_9gqrb478ygp.eot');
+  src: url('//at.alicdn.com/t/font_1938703_9gqrb478ygp.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1938703_9gqrb478ygp.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1938703_9gqrb478ygp.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1938703_9gqrb478ygp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1938703_9gqrb478ygp.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-remen:before {
+  content: "\e601";
+}
+
+.icon-shouye:before {
+  content: "\e617";
+}
+
+.icon-shoucang:before {
+  content: "\e60c";
+}
+
+.icon-fanhui:before {
+  content: "\e62b";
+}
+
+.icon-iconfont:before {
+  content: "\e602";
+}
+
+.icon-iconfont1:before {
+  content: "\e603";
+}
+
+.icon-you:before {
+  content: "\e6e4";
+}
+
+.icon-bili_face:before {
+  content: "\e600";
+}
+
+.icon-play:before {
+  content: "\e607";
+}
+
+.icon-UPzhu:before {
+  content: "\e665";
+}
+
+.icon-zhuanfa:before {
+  content: "\e609";
+}

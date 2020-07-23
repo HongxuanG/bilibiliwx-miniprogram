@@ -1,0 +1,36 @@
+<nav-bar type="2"></nav-bar>
+<view class="search-bar">
+	<van-search
+    value="{{ value }}"
+    shape="round"
+    placeholder="请输入搜索关键词"
+    use-action-slot
+    bind:change="onChange"
+    bind:search="onSearch"
+    >
+        <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+</view>
+<view class="search-sug">
+    <view class="caption">
+        <view class="caption-title">大家都在搜</view>
+        <view class="sug-content clearfix">
+            <block wx:for="{{search_sug}}" wx:key="index">
+                <view class="sug"><text bindtap="searchsug" data-value="{{item}}">{{item}}</text></view>
+            </block>
+        </view>
+    </view>
+    <view class="caption" wx:if="{{historyList.length!=0}}">
+        <view class="caption-title">搜索历史</view>
+        <view class="lishi-content">
+            <block wx:for="{{historyList}}" wx:key="index">
+                <view class="lishi-item clearfix">
+                    <text class="iconfont icon-lishijilu"></text>
+                    <view class="lishi" bindtap="searchsug" data-value="{{item}}">{{item}}</view>
+                    <text class="iconfont icon-del" bindtap="delItem" data-idx="{{index}}"></text>
+                </view>
+            </block>
+        </view>
+        <view class="delhistory" bindtap="delHistory" bindtap="delHistory">清除历史记录</view>
+    </view>
+</view>

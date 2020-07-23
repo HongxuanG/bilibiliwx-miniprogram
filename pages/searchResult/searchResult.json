@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav-bar":"/components/navbar/navbar",
+    "van-search": "@vant/weapp/search/index",
+    "videoCard":"/components/videoCard/videoCard",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  }
+}

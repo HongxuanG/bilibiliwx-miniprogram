@@ -1,0 +1,72 @@
+<wxs module="tools" src="../../pages/filter/tools.wxs"></wxs>
+<nav-bar type="2" title="哔哩哔哩"></nav-bar>
+<!-- 番剧部分  国创部分 选择-->
+<view style="height:90px">
+    <view class="fixedLayout" style="top:{{height}}px;">
+        <!-- 选择 -->
+        <view class="select-item">
+            <block wx:for="{{select_item}}" wx:key="index">
+                <view class="{{index==currentIndex?'active':''}}" bindtap="changeSelect" data-idx="{{index}}">
+                    <text>{{item.name}}</text>
+                </view>
+            </block>
+        </view>
+        <!-- 分类选项 -->
+        <!-- 番剧 -->
+        <view class="select-bar" wx:if="{{currentIndex == 0}}">
+            <block wx:for="{{conditionAnime}}" wx:key="index">
+                <view class="season-version">
+                    <view class="season" bindtap="selectOption" data-idx="{{index}}">
+                        {{item.name}}
+                        <text class="iconfont icon-qingniaoxitongtubiao_xia" wx:if="{{!selectSign[index]}}"></text>
+                        <text class="iconfont icon-arrow-top" wx:if="{{selectSign[index]}}"></text>
+                    </view>
+                    <view class="options clearfix" wx:if="{{selectSign[index]}}">
+                        <block wx:for="{{item.value}}" wx:for-index="i" wx:for-item="itm" wx:key="i">
+                            <view class="label {{i == initialValue[index] ?'active':''}}" bindtap="selected" data-id="{{itm.id}}" data-k="{{i}}">
+                                {{itm.name}}
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <!-- 国创 -->
+        <view class="select-bar" wx:if="{{currentIndex == 1}}">
+            <block wx:for="{{conditionGuoc}}" wx:key="index">
+                <view class="season-version" bindtap="selectOption" data-idx="{{index}}">
+                    <view class="season">
+                        {{item.name}}
+                        <text class="iconfont icon-qingniaoxitongtubiao_xia" wx:if="{{!selectSign[index]}}"></text>
+                        <text class="iconfont icon-arrow-top" wx:if="{{selectSign[index]}}"></text>
+                    </view>
+                    <view class="options clearfix" wx:if="{{selectSign[index]}}">
+                        <block wx:for="{{item.value}}" wx:for-index="i" wx:for-item="itm" wx:key="i">
+                            <view class="label {{i == initialValue[index] ?'active':''}}" bindtap="selected" data-id="{{itm.id}}" data-k="{{i}}">
+                                {{itm.name}}
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>
+<view class="content">
+<!-- 番剧部分 -->
+	<view class="anime clearfix" hidden="{{currentIndex!=0}}">
+		<empty item="{{animeList}}"></empty>
+		<block wx:for="{{animeList}}" wx:key="index" >
+			<cartoonCard video="{{item}}"  transmit></cartoonCard>
+		</block>
+        <view class="more" wx:if="{{animeListPageIsEmpty}}">更多请到bilibili客户端查看</view>
+	</view>
+<!-- 国创部分 -->
+	<view class="guochuang clearfix" hidden="{{currentIndex!=1}}">
+		<empty item="{{guocList}}"></empty>
+		<block wx:for="{{guocList}}" wx:key="index" >
+			<cartoonCard video="{{item}}"  transmit></cartoonCard>
+		</block>
+        <view class="more" wx:if="{{guocListPageIsEmpty}}">更多请到bilibili客户端查看</view>
+	</view>
+</view>

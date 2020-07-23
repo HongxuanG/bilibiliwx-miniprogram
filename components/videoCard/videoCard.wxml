@@ -1,0 +1,43 @@
+<wxs module="tools" src="../../pages/filter/tools.wxs" />
+<view class="video-item" bindtap="videoDetail" data-aid="{{video.aid}}">
+    <view class="video-img">
+        <image src="{{video.pic}}" lazy-load="{{true}}">
+            <view class="duration">
+                <view class="duration-time" wx:if="{{cardType==0}}">
+                    {{tools.duration(video.duration)}}
+                </view>
+                <view class="duration-time" wx:if="{{cardType==1}}">
+                    {{video.duration}}
+                </view>
+            </view>				
+        </image>
+    </view>
+    <view class="video-info">
+        <text class="title txt-cut" wx:if="{{cardType==0}}">{{video.title}}</text>
+        <view class="title txt-cut" wx:if="{{cardType==1}}"><rich-text nodes="{{video.title}}"></rich-text></view>
+        <view class="tag">
+            <view class="tag-box" wx:if="{{video.hot_desc}}">
+                <text>{{video.hot_desc}}</text>
+            </view>
+        </view>
+        <view class="up_name">
+            <text class="iconfont icon-UPzhu"></text> 
+            <text wx:if="{{cardType==0}}">{{video.author.name || video.owner.name}}</text>
+            <text wx:if="{{cardType==1}}">{{video.author}}</text>
+        </view>
+        <view class="video-msg">
+            <view class="play_num">
+                <text class="iconfont icon-play"></text>
+                <text wx:if="{{cardType==0}}">{{tools.viewNum(video.stat.view)}}</text>
+                <text wx:if="{{cardType==1}}">{{tools.viewNum(video.play)}}</text>
+            </view>
+            <view class="day">
+                <text wx:if="{{cardType==0}}">{{tools.dateFormat(video.ctime)}}</text>
+                <text wx:if="{{cardType==1}}">{{tools.dateFormat(video.senddate)}}</text>
+            </view>
+            <view class="transmit" wx:if="{{transmit}}">
+                <text class="iconfont icon-zhuanfa"></text>
+            </view>
+        </view>
+    </view>
+</view>

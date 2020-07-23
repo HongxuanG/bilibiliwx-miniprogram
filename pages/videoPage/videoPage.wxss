@@ -1,0 +1,336 @@
+/* pages/videoPage/videoPage.wxss */
+.video-view{
+    width: 100%;
+    height: 210px;
+}
+.video-view video{
+    height: 100%;
+    width: 100%;
+}
+.optional-bar{
+    height: 40px;
+    box-shadow: 0px 3px 5px rgba(56, 56, 56, 0.5);
+    display: flex;
+    text-align: center;
+}
+.optional-bar .brief,.optional-bar .comment,.optional-bar .switch{
+    height: 40px;
+    line-height: 40px;
+    flex:1;
+}
+.optional-bar .brief text,.optional-bar .comment text{
+    display: inline-block;
+    height: 40px;
+    color: #757575;
+    box-sizing: border-box;
+    border-bottom: 3px solid transparent;
+}
+.optional-bar .comment text{
+    display: inline-block;
+}
+.optional-bar .comment{
+}
+.optional-bar .switch{
+
+    padding: 6px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.optional-bar .switch .bullet-switch{
+    display: inline-block;
+    width: 56px;
+    height: 28px;
+    border: 1px solid #e7e7e7;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 28px;
+    box-sizing: border-box;
+    font-size: 28px;
+    color: #a4a4a4;
+}
+.optional-bar .switch .bullet-switch .iconfont{
+    vertical-align: middle;
+    font-size: 22px;
+}
+.optional-bar .switch .bullet-switch .icon-iconfont{
+    color: #fb7299;
+}
+/* 点击之后 */
+.optional-bar .active text{
+    color: #fb7299;
+    border-bottom: 3px solid #fb7299;
+}
+.video-header{
+    padding: 0 11px 8px 11px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.video-header .header{
+    margin: 13px 0;
+}
+.video-header .header .title{
+    float: left;
+    width: calc(100% - 144rpx);
+}
+.video-header .header .title .label{
+    display: inline-block;
+    width: 56px;
+    height: 22px;
+    border-radius: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+    line-height: 22px;
+    font-size: 12px;
+    color: #fb7299;
+}
+.video-header .header .title .video-title{
+    font-size: 16px;
+    
+}
+.video-header .header .title .label .icon-remen{
+
+}
+.video-header .header .title .label .label-text{
+
+}
+.video-header .header .collect{
+    float: right;
+    width: 144rpx;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    background-color: #fb7299;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.video-header .header .collect .icon-shoucang{
+    margin-right: 3px;
+}
+.video-header .header .collect .collect-text{
+
+}
+.video-header .video-info{
+    line-height: 30px;
+}
+.video-header .video-info .video-owner{
+    font-size: 12px;
+    float: left;
+}
+.video-header .video-info .video-date{
+    font-size: 12px;
+    float: right;
+    color: #999999;
+}
+.video-header .video-info .video-date text{
+    margin-right: 5px;
+}
+.video-header .video-desc{
+    color: #999999;
+    font-size: 12px;
+}
+.video-header .video-desc text{
+
+}
+/* 分类标签 */
+.body{
+    padding-top: 11px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.body .category-tag{
+}
+.body .category-tag .tag{
+    padding: 0 13px;
+    float: left;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #f4f4f4;
+    color: #696969;
+    line-height: 35px;
+    text-align: center;
+    margin: 0 5px;
+    margin-bottom: 10px;
+}
+.body .category-tag .tag text{
+
+}
+/* 推荐列表 */
+.content{
+    padding-bottom: 45px;
+}
+.content .video-item{
+  border-bottom: 1px solid #f4f4f4;
+  padding: 10px;
+  display: flex;
+}
+.content .video-item .video-img{
+  width: 151px;
+  height: 94px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 7px;
+}
+.content .video-item .video-img image{
+  width: 151px;
+  height: 94px;
+  position: relative;
+}
+.content .video-item .video-img .duration{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  height: 15px;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+}
+.content .video-item .video-img .duration .duration-time{
+  line-height: 15px;
+}
+.content .video-item .video-info{
+  flex: 1;
+  font-size: 12px;
+}
+.content .video-item .video-info .title{
+  margin-bottom: 15px;
+  height: 30px;
+}
+.content .video-item .video-info .up_name{
+  font-size: 12px;
+  color: #979797;
+}
+.content .video-item .video-info .tag{
+  font-size: 10px;
+  display: inline-block;
+  border: 1px solid #ffb866;
+  color: #ffb866;
+  padding: 0 2px;
+}
+.content .video-item .video-info .tag text{
+  
+}
+.content .video-item .video-info .up_name .iconfont{}
+.content .video-item .video-info .up_name text{}
+.content .video-item .video-info .video-msg{
+  font-size: 12px;
+  color: #979797;
+  display: flex;
+  height: 20px;
+}
+.content .video-item .video-info .video-msg .play_num{
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+.content .video-item .video-info .video-msg .play_num .iconfont{
+  
+}
+.content .video-item .video-info .video-msg .play_num text{}
+.content .video-item .video-info .video-msg .day{
+  flex: 1;
+  text-align: center;
+}
+.content .video-item .video-info .video-msg .day text{}
+.content .video-item .video-info .video-msg .transmit{
+  flex: 1;
+  text-align: right;
+}
+.content .video-item .video-info .video-msg .transmit .iconfont{
+  font-size: 14px;
+}
+/* 评论区 */
+.commend-content{
+    padding-bottom: 45px;
+}
+.commend-content .floors{
+    padding: 15px 16px 14px 62px;
+    position: relative;
+    border-bottom: 1px solid #e7e7e7;
+}
+.commend-content .floors .floorOwner{
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #fb7299;
+    overflow: hidden;
+}
+.commend-content .floors .floorOwner image{
+    width: 100%;
+    height: 100%;
+}
+.commend-content .floors .OwnerSay{
+
+}
+.commend-content .floors .ReplierSay{
+    border-top: 1px solid #e7e7e7;
+}
+.commend-content .floors .OwnerSay .OwnerName,.commend-content .floors .ReplierSay .ReplierName{
+    font-size: 14px;
+    margin: 15px 0;
+}
+.commend-content .floors .OwnerSay .context,.commend-content .floors .ReplierSay .context{
+    margin-bottom: 10px;
+    color: #212121;
+    font-size: 14px;
+}
+.commend-content .floors .OwnerSay .context text,.commend-content .floors .ReplierSay .context text{
+
+}
+.commend-content .floors .OwnerSay .OwnerName.lightHight{
+    color: #fb7299;
+}
+.commend-content .floors .ReplierSay{
+
+}
+.commend-content .floors .ReplierSay .ReplierName{
+
+}
+.commend-content .floors .ReplierSay .context{
+    
+}
+.commend-content .floors .ReplierSay .context text{
+
+}
+.transmitBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 44px;
+    border-top: 1px solid #e7e7e7;
+    width: 100%;
+    line-height: 44px;
+    background-color: #fff;
+}
+.transmitBar .wechat{
+    width: 50%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: #505050;
+    border: 0;
+    height: 100%;
+}
+.transmitBar .pic{
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 16px;
+    color: #505050;
+    border: 0;
+    height: 100%;
+}
+.transmitBar .pic::after,.transmitBar .wechat::after{
+    border: 0;
+
+}
+.transmitBar .wechat text{
+    color: #57bb40;
+}
+.transmitBar .pic text{
+    color: #505050;
+}

@@ -1,0 +1,19 @@
+/* pages/partition/partition.wxss */
+.category{
+    
+}
+.category .category-item{
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin: 10px 0;
+}
+.category .category-item image{
+    display: block;
+    margin: 0 auto;
+    width: 68rpx; /* 34px */
+    height: 76rpx; /* 34px */
+}
+.category .category-item text{
+    color: #484848;
+}

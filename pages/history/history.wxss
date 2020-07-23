@@ -1,0 +1,84 @@
+/* pages/history/history.wxss */
+.historyList{
+  padding-bottom: 55px;
+}
+.historyList .historyItem{
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    display: flex;
+  }
+  .historyList .historyItem .video-img{
+    width: 151px;
+    height: 94px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 7px;
+  }
+  .historyList .historyItem .video-img image{
+    width: 151px;
+    height: 94px;
+    position: relative;
+  }
+  
+  .historyList .historyItem .video-info{
+    flex: 1;
+    font-size: 12px;
+  }
+  .historyList .historyItem .video-info .title{
+    margin-bottom: 15px;
+    height: 30px;
+  }
+  .historyList .historyItem .video-info .up_name{
+    font-size: 12px;
+    color: #979797;
+  }
+  .historyList .historyItem .video-info .tag{
+    height: 20px;
+  }
+  .historyList .historyItem .video-info .tag .tag-box{
+    font-size: 10px;
+    display: inline-block;
+    border: 1px solid #ffb866;
+    color: #ffb866;
+    padding: 0 2px;
+  }
+
+  .historyList .historyItem .video-info .up_name .iconfont{}
+  .historyList .historyItem .video-info .up_name text{}
+  .historyList .historyItem .video-info .video-msg{
+    font-size: 12px;
+    color: #979797;
+    height: 20px;
+  }
+  
+  .historyList .historyItem .video-info .video-msg .day{
+    text-align: left;
+  }
+  .historyList .historyItem .video-info .video-msg .day text{}
+  .editBtn{
+      position: fixed;
+      bottom: 0;
+      left:0;
+      width: 100%;
+      height: 55px;
+      border-top: 1px solid #e7e7e7;
+      background-color: #fff;
+      font-weight: normal;
+      text-align: center;
+      line-height: 55px;
+      font-size: 16px;
+  }
+  .emptyStatus{
+    width: 191px;
+    height: 179px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .emptyStatus image{
+    width: 100%;
+    height: 100%;
+  }
+  .emptyStatus text{
+    font-size: 12px;
+    color: #6e7f8d;
+  }

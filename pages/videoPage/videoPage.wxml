@@ -1,0 +1,115 @@
+<wxs module="tools" src="../filter/tools.wxs" />
+<!-- 顶部导航 -->
+<nav-bar type="1"></nav-bar>
+<view class="video-view">
+    <video 
+        src="{{videoUrl}}" 
+        id="myvideo" 
+        autoplay 
+        show-mute-btn 
+        muted="{{flase}}" 
+        bindfullscreenchange="toggleFullScreen" 
+        danmu-list="{{danmuList}}"
+        enable-danmu
+    >
+
+    </video>
+</view>
+<view class="optional-bar">
+    <view class="brief {{currentIndex==0 ? 'active':''}}" bindtap="changeBrief">
+        <text>简介</text>
+    </view>
+    <view class="comment {{currentIndex==1 ? 'active':''}}" bindtap="changeComment">
+        <text>评论{{currentPageData.Reply.page.count}}</text>
+    </view>
+    <view class="switch">
+        <view class="bullet-switch" bindtap="switch">
+            <!-- 开 -->
+            <text wx:if="{{bullet_switch}}" class="iconfont icon-iconfont" ></text>
+            <!-- 关 -->
+            <text wx:if="{{!bullet_switch}}" class="iconfont icon-iconfont1"></text>
+        </view>
+    </view>
+</view>
+<!-- video详情 -->
+<view class="brief-content"  hidden="{{currentIndex != 0}}">
+    <view class="video-header">
+        <view class="header clearfix">
+            <view class="title one-txt-cut" >
+                <view class="label">
+                    <text class="iconfont icon-remen"></text>
+                    <text class="label-text">热门</text>
+                </view> 
+                <text class="video-title">{{currentPageData.View.title}}</text>
+            </view>
+            <view class="collect">
+                <text class="iconfont icon-shoucang" ></text>
+                <text class="collect-text">收藏</text>
+            </view>
+        </view>
+        <view class="video-info clearfix">
+            <view class="video-owner">{{currentPageData.View.owner.name}}</view>
+            <view class="video-date">
+                <text>{{tools.viewNum(currentPageData.View.stat.view)}}次观看</text>
+                <text>{{tools.viewNum(currentPageData.View.stat.danmaku)}}弹幕</text>
+                <text>{{tools.dateFormat(currentPageData.View.ctime)}}</text>
+            </view>
+        </view>
+        <view class="video-desc">
+            <text>{{currentPageData.View.desc}}</text>
+        </view>
+    </view>
+    <view class="body">
+        <!-- 标签 -->
+        <view class="category-tag clearfix">
+            <block wx:for="{{currentPageData.Tags}}" wx:key="index">
+                <view class="tag">
+                    <text>{{item.tag_name}}</text>
+                </view>
+            </block>
+        </view>
+        <!-- 推荐视频 -->
+        <view class="content" wx:if="hotList.length!=0">
+            <block wx:for="{{currentPageData.Related}}" wx:key="index">
+                <videoCard video="{{item}}"  transmit></videoCard>
+            </block>
+        </view>
+    </view>
+</view>
+<!-- 评论区 -->
+<view class="commend-content" hidden="{{currentIndex != 1}}">
+    <block wx:for="{{commentList.replies}}" wx:key="index">
+        <view class="floors">
+            <view class="floorOwner">
+                <image src="{{item.member.avatar}}"></image>
+            </view>
+            <view class="OwnerSay">
+                <view class="OwnerName {{item.member.vip.vipStatus?'lightHight':''}}">{{item.member.uname}}</view>
+                <view class="context">
+                    <text>{{item.content.message}}</text>
+                </view>
+            </view>
+            <block wx:for="{{item.replies}}" wx:for-index="idx" wx:for-item="itm" wx:key="index">
+                <view class="ReplierSay">
+                    <view class="ReplierName">{{itm.member.uname}}</view>
+                    <view class="context">
+                        <text>{{itm.content.message}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </block>
+    <view style="text-align:center;">
+        <text style="color:#c0c0c0;font-size:12px">更多请到bilibili客户端查看</text>
+    </view>
+</view>
+<view class="transmitBar">
+    <button class="wechat">
+        <text class="iconfont icon-weixin"></text>
+        分享给好友
+    </button>
+    <button class="pic" bindtap="">
+        <text class="iconfont icon-xiazai2"></text>
+        生成海报
+    </button>
+</view>

@@ -1,0 +1,10 @@
+<!-- 顶部导航 -->
+<nav-bar></nav-bar>
+<view class="category">
+    <block wx:for="{{partition}}" wx:key="index">
+        <view class="category-item">
+            <image src="{{item.icon}}"></image>
+            <text>{{item.text}}</text>
+        </view>
+    </block>
+</view>

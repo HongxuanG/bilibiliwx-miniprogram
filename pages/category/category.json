@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/navbar",
+    "loading": "/components/loading/loading",
+    "cartoonCard": "/components/cartoon/cartoon",
+    "empty":"/components/empty/empty"
+  },
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance":50
+}

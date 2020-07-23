@@ -1,0 +1,54 @@
+<nav-bar type="2" ></nav-bar>
+<view class="search-bar" style="margin-top:{{height}}px">
+	<van-search
+    value="{{ value }}"
+    shape="round"
+    placeholder="请输入搜索关键词"
+    use-action-slot
+    bind:change="onChange"
+    bind:search="onSearch"
+    >
+        <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+</view>
+<!-- <van-tabs active="{{ active }}" bind:change="onChange" animated swipeable>
+    <van-tab title="默认播放">
+        <block wx:for="{{resultList}}" wx:key="index" >
+            <videoCard video="{{item}}" cardType="1" ></videoCard>
+        </block>
+    </van-tab>
+    <van-tab title="播放多">
+        <block wx:for="{{resultList}}" wx:key="index" >
+            <videoCard video="{{item}}" cardType="1" ></videoCard>
+        </block>
+    </van-tab>
+    <van-tab title="新发布">
+        <block wx:for="{{resultList}}" wx:key="index" >
+            <videoCard video="{{item}}" cardType="1" ></videoCard>
+        </block>
+    </van-tab>
+</van-tabs> -->
+<view class="select-item">
+    <block wx:for="{{select_item}}" wx:key="index">
+        <view class="{{index==currentIndex?'active':''}}">
+            <text data-idx="{{index}}" bindtap="changeSelect">{{item.name}}</text>
+        </view>
+    </block>
+</view>
+<view class="content">
+    <view hidden="{{currentIndex!=0}}">
+        <block wx:for="{{totalrankList}}" wx:key="index">
+            <videoCard video="{{item}}" cardType="1"></videoCard>
+        </block>
+    </view>
+    <view hidden="{{currentIndex!=1}}">
+	    <block wx:for="{{clickList}}" wx:key="index" hidden="{{false}}">
+		    <videoCard video="{{item}}" cardType="1"></videoCard>
+	    </block>    
+    </view>
+    <view hidden="{{currentIndex!=2}}">
+	    <block wx:for="{{pubdateList}}" wx:key="index" hidden="{{true}}">
+		    <videoCard video="{{item}}" cardType="1"></videoCard>
+	    </block>    
+    </view>
+</view>

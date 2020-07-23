@@ -1,0 +1,176 @@
+.video-item{
+  border-top: 1px solid #f4f4f4;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.video-item .video-img{
+  width: 151px;
+  height: 94px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 7px;
+}
+.video-item .video-img image{
+  width: 151px;
+  height: 94px;
+  position: relative;
+}
+.video-item .video-img .duration{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  height: 15px;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+}
+.video-item .video-img .duration .duration-time{
+  line-height: 15px;
+}
+.video-item .video-info{
+  flex: 1;
+  font-size: 12px;
+}
+.video-item .video-info .title{
+  margin-bottom: 15px;
+  height: 30px;
+}
+.video-item .video-info .up_name{
+  font-size: 12px;
+  color: #979797;
+}
+.video-item .video-info .tag{
+    height: 20px;
+}
+.video-item .video-info .tag .tag-box{
+  font-size: 10px;
+  display: inline-block;
+  border: 1px solid #ffb866;
+  color: #ffb866;
+  padding: 0 2px;
+}
+.video-item .video-info .tag .tag-box text{
+  
+}
+.video-item .video-info .up_name .iconfont{}
+.video-item .video-info .up_name text{}
+.video-item .video-info .video-msg{
+  font-size: 12px;
+  color: #979797;
+  display: flex;
+  height: 20px;
+}
+.video-item .video-info .video-msg .play_num{
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+.video-item .video-info .video-msg .play_num .iconfont{
+  
+}
+.video-item .video-info .video-msg .play_num text{}
+.video-item .video-info .video-msg .day{
+  flex: 1;
+  text-align: center;
+}
+.video-item .video-info .video-msg .day text{}
+.video-item .video-info .video-msg .transmit{
+  flex: 1;
+  text-align: right;
+}
+.video-item .video-info .video-msg .transmit .iconfont{
+  font-size: 14px;
+}
+.txt-cut{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* 阿里矢量图标 */
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  /* 阿里矢量图标 */
+  @font-face {
+    font-family: 'iconfont';  /* project id 1938703 */
+    src: url('//at.alicdn.com/t/font_1938703_0wpz2sp6wsx.eot');
+    src: url('//at.alicdn.com/t/font_1938703_0wpz2sp6wsx.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1938703_0wpz2sp6wsx.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1938703_0wpz2sp6wsx.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1938703_0wpz2sp6wsx.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1938703_0wpz2sp6wsx.svg#iconfont') format('svg');
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-lishijilu:before {
+    content: "\e604";
+  }
+  
+  .icon-del:before {
+    content: "\e608";
+  }
+  
+  .icon-remen:before {
+    content: "\e601";
+  }
+  
+  .icon-shouye:before {
+    content: "\e617";
+  }
+  
+  .icon-shoucang:before {
+    content: "\e60c";
+  }
+  
+  .icon-fanhui:before {
+    content: "\e62b";
+  }
+  
+  .icon-iconfont:before {
+    content: "\e602";
+  }
+  
+  .icon-iconfont1:before {
+    content: "\e603";
+  }
+  
+  .icon-you:before {
+    content: "\e6e4";
+  }
+  
+  .icon-bili_face:before {
+    content: "\e600";
+  }
+  
+  .icon-play:before {
+    content: "\e607";
+  }
+  
+  .icon-UPzhu:before {
+    content: "\e665";
+  }
+  
+  .icon-zhuanfa:before {
+    content: "\e609";
+  }

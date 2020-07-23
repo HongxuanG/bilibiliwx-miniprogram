@@ -1,0 +1,88 @@
+var unit = {
+    duration:function(origin){
+        var hour = Math.floor(origin / 3600);
+        var min = Math.floor(origin % 3600 / 60);
+        var sec = Math.floor(origin % 3600 % 60);
+        hour = hour > 9 ? hour : "0" + hour;
+        min = min > 9 ? min : "0" + min;
+        sec = sec > 9 ? sec : "0" + sec;
+        if(hour==0){
+            return min + ":" + sec;
+        }else{
+            return hour + ":" + min + ":" + sec;
+        }
+    },
+    viewNum:function(origin){
+        if(origin >= 10000){
+            return (origin / 10000).toFixed(1) + "万"
+        }else{
+            return origin
+        }
+    },
+    dateFormat:function(time){
+        if (!time) return '';
+        var date = getDate(time);
+        
+        var M = date.getMonth() + 1;
+        var y = date.getFullYear();
+        var d = date.getDate();
+
+        M = M > 9 ? M : "0" + M;
+        d = d > 9 ? d : "0" + d;
+
+        return M + "-" + d;
+    },
+    weekFormat:function(weekDay){
+        var result = "";
+        switch(weekDay){
+            case 1:
+                result = "一";
+                break;
+            case 2:
+                result = "二";
+                break;
+            case 3:
+                result = "三";
+                break;
+            case 4:
+                result = "四";
+                break;
+            case 5:
+                result = "五";
+                break;
+            case 6:
+                result = "六";
+                break;
+            case 7:
+                result = "七";
+                break;
+        }
+        return result;
+    },
+    grouping:function(data,num,index){
+        var group = [];
+        for(var i =0 ; i < data.length ; i+=num){
+            group.push(data.slice(i,i+num));
+        }
+        return group[index];
+    },
+    fullDateFormat:function(date){
+        var data = getDate(date);
+        var today = getDate()
+        if(today.getMonth()+1 == data.getMonth()+1 && today.getDate() == data.getDate()){
+            return '今天 '+data.getHours()+':'+data.getMinutes();
+        }else if(today.getMonth() == data.getMonth()+1 && today.getDate()-1 == data.getDate()){
+            return '昨天 '+data.getHours()+':'+data.getMinutes();
+        }else{
+            return data.getMonth()+1+'-'+data.getDate()+' '+data.getHours()+':'+data.getMinutes()
+        }
+    }
+}
+module.exports = {
+    duration:unit.duration,
+    viewNum:unit.viewNum,
+    dateFormat:unit.dateFormat,
+    weekFormat:unit.weekFormat,
+    grouping:unit.grouping,
+    fullDateFormat:unit.fullDateFormat
+}

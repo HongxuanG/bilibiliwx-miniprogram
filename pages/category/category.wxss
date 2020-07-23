@@ -1,0 +1,102 @@
+/* pages/category/category.wxss */
+.select-item{
+    padding-top: 5px;
+    box-sizing: border-box;
+    display: flex;
+    height: 45px;
+}
+.select-item view{
+    flex: 1;
+    text-align: center;
+    color: #151515;
+
+}
+.select-item view text{
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+.select-item view.active{
+    color: #fb7299;
+}
+.select-item view.active text{
+    border-bottom: 2px solid #fb7299;
+}
+.fixedLayout{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background-color: #fff;
+    z-index: 99;
+    border-bottom: 1px solid #e7e7e7;
+}
+.select-bar{
+    border-top: 1px solid #e7e7e7;
+    height: 43px;
+    line-height: 43px;
+    display: flex;
+}
+.select-bar .season-version,.select-bar .style-id,.select-bar .status{
+    flex: 1;
+}
+.select-bar .season-version .season,.select-bar .style-id .style,.select-bar .status .is_finish{
+    color: #757575;
+    font-size: 14px;
+    text-align: center;
+}
+.select-bar .season-version .season text,.select-bar .style-id .style text,.select-bar .status .is_finish text{
+    font-size: 12px;
+    color: #757575;
+}
+.select-bar .season-version .options{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 8px 9px #555;
+}
+.select-bar .season-version .options .label{
+    margin: 5px 11px;
+    width: calc(25% - 22px);
+    background-color: #fff;
+    line-height: 26px;
+    height: 26px;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    color: #505050;
+}
+.select-bar .season-version .options .label.active{
+    background-color: #f4f4f4;
+    color: #fb7299;
+    border-radius: 3px;
+}
+
+.select-bar .style-id{}
+.select-bar .style-id .style{}
+.select-bar .style-id .style text{}
+.select-bar .style-id .options{}
+
+.select-bar .status{}
+.select-bar .status .is_finish{}
+.select-bar .status .is_finish text{}
+.select-bar .status .options{}
+/* 番剧部分 */
+.content{
+    padding-left: 11px;
+    padding-top: 11px;
+}
+.content .anime {
+    
+}
+/* 国创部分 */
+.content .guochuang{
+    
+}
+.content .anime .more,.content .guochuang .more{
+    text-align: center;
+    font-size: 12px;
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}

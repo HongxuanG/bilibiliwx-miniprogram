@@ -1,0 +1,48 @@
+.mine-header{
+    overflow: hidden;
+    border-bottom: 1px solid #e7e7e7;
+}
+.face{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 122rpx;
+    height: 122rpx;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid #fafbfc;
+    background-color: #e5e9f1;
+    text-align: center;
+    line-height: 122rpx;
+}
+.face .icon-bili_face{
+    color: #adb6bf;
+}
+.btn-part{
+}
+.btn-part .btn{
+    width: 77px;
+    height: 33px;
+    background-color: #fb7299;
+    color: white;
+    text-align: center;
+    line-height: 33px;
+    border-radius: 5px;
+    margin: 12px auto;
+}
+.recordItem{
+    margin-right: 11px;
+    float: left;
+    width: calc(33.33% - 11px);
+    margin-bottom: 11px;
+}
+.recordItem image{
+    border-radius: 3px;
+    width: 100%;
+    height: 154rpx;
+    vertical-align: top;
+    margin-bottom: 5px;
+}
+.recordItem text{
+    font-size: 15px;
+    line-height: 20px;
+}

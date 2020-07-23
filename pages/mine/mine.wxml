@@ -1,0 +1,30 @@
+<!-- 顶部导航 -->
+<nav-bar></nav-bar>
+<view class="mine-header">
+    <view class="face">
+        <text class="iconfont icon-bili_face"></text>
+    </view>
+    <view class="btn-part">
+        <view class="btn" bindtap="biliLogin">
+            B站登录
+        </view>
+    </view>
+</view>
+<!-- 自定义组件 -->
+<section title="历史记录" tag="查看更多" bindtap="history">
+    <block wx:for="{{record[0]}}" wx:key="index">
+        <view class="recordItem">
+            <image src="{{item.video.pic}}"></image>
+            <text class="txt-cut">{{item.video.title}}</text>
+        </view>
+    </block>
+</section>
+<section title="我的收藏" tag="查看更多" bindtap="collect">
+    <block wx:for="{{record[0]}}" wx:key="index">
+        <view class="recordItem">
+            <image src="{{item.video.pic}}"></image>
+            <text class="txt-cut">{{item.video.title}}</text>
+        </view>
+    </block>
+</section>
+<section title="意见反馈"></section>

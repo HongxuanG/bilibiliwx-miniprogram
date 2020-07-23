@@ -1,0 +1,13 @@
+<!--components/section/section.wxml-->
+<view class="section">
+    <view class="header">
+        <view class="section-title">{{title}}</view>
+        <view class="section-detail">
+            <text class="tag" wx:if="tag">{{tag}}</text>
+            <text class="iconfont icon-you"></text>
+        </view>
+    </view>
+    <view class="body clearfix">
+        <slot></slot>
+    </view>
+</view>

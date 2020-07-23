@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/category",
+    "pages/searchResult/searchResult",
+    "pages/mine/mine",
+    "pages/videoPage/videoPage",
+    "pages/searchPage/searchPage",
+    "pages/history/history",
+    "pages/login/login",
+    "pages/partition/partition",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "哔哩哔哩",
+    "navigationBarTextStyle":"black",
+    "navigationStyle":"custom"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#ff6e9f",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath":"./images/shouye.png",
+        "selectedIconPath":"./images/shouye2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/partition/partition",
+        "iconPath":"./images/fenqu.png",
+        "selectedIconPath":"./images/fenqu2.png",
+        "text": "分区"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath":"./images/wode.png",
+        "selectedIconPath":"./images/wode2.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

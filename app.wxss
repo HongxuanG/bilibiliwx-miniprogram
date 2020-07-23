@@ -1,0 +1,122 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.one-txt-cut{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.txt-cut{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* 阿里矢量图标 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1938703 */
+  src: url('//at.alicdn.com/t/font_1938703_fdvh2jv8sdc.eot');
+  src: url('//at.alicdn.com/t/font_1938703_fdvh2jv8sdc.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1938703_fdvh2jv8sdc.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1938703_fdvh2jv8sdc.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1938703_fdvh2jv8sdc.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1938703_fdvh2jv8sdc.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-top:before {
+  content: "\e606";
+}
+
+.icon-qingniaoxitongtubiao_xia:before {
+  content: "\e66d";
+}
+
+.icon-xiazai2:before {
+  content: "\e605";
+}
+
+.icon-weixin:before {
+  content: "\e60a";
+}
+
+.icon-huanyihuan:before {
+  content: "\e6a6";
+}
+
+.icon-lishijilu:before {
+  content: "\e604";
+}
+
+.icon-del:before {
+  content: "\e608";
+}
+
+.icon-remen:before {
+  content: "\e601";
+}
+
+.icon-shouye:before {
+  content: "\e617";
+}
+
+.icon-shoucang:before {
+  content: "\e60c";
+}
+
+.icon-fanhui:before {
+  content: "\e62b";
+}
+
+.icon-iconfont:before {
+  content: "\e602";
+}
+
+.icon-iconfont1:before {
+  content: "\e603";
+}
+
+.icon-you:before {
+  content: "\e6e4";
+}
+
+.icon-bili_face:before {
+  content: "\e600";
+}
+
+.icon-play:before {
+  content: "\e607";
+}
+
+.icon-UPzhu:before {
+  content: "\e665";
+}
+
+.icon-zhuanfa:before {
+  content: "\e609";
+}
+

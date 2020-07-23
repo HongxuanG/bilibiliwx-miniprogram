@@ -1,0 +1,20 @@
+<view style="height:{{height}}px;">
+    <view class="nav-wrap" style="height:{{height}}px;">
+        <view class="nav-title" wx:if="{{type==0}}" style="line-height:{{navBarHeight}}px">{{title}}</view>
+        <view class="detailPage" wx:if="{{type==1}}" style="line-height:{{navBarHeight}}px">
+            <view class="capsule">
+                <text class="iconfont icon-fanhui" bindtap="back"></text>
+                <view class="line"></view>
+                <text class="iconfont icon-shouye" bindtap="toHome"></text>
+            </view>
+            <view class="search" bindtap="goSearch">
+                <icon class="icon-small" type="search" size="20"></icon>
+                <input class="search-input" type="text"  placeholder="搜索哔哩哔哩内容" style="width:{{MenuCapsule.left-30-95}}px"></input>
+            </view>
+        </view>
+        <view class="navTitleWithBack" wx:if="{{type==2}}" style="line-height:{{navBarHeight}}px">
+            <text class="iconfont icon-fanhui" bindtap="back"></text>
+            <text class="navTitle">{{title}}</text>
+        </view>
+    </view>
+</view>

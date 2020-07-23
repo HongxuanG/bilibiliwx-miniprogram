@@ -1,0 +1,22 @@
+<nav-bar type="2"></nav-bar>
+<view class="img">
+    <image src="../../images/account.png" hidden="{{input_pwd}}"></image>
+    <image src="../../images/password.png" hidden="{{!input_pwd}}"></image>
+</view>
+<view class="loginForm">
+    <view class="section account">
+        <view>
+            <text>账号</text>
+        </view>
+        <input type="text" placeholder="请输入B站账号"></input>
+    </view>
+    <view class="section password">
+        <view>
+            <text>密码</text>
+        </view>
+        <input type="text" bindfocus="onfocus" bindblur="onblur" placeholder="请输入登录密码"></input>
+    </view>
+</view>
+<view class="button">
+    <button class="login_btn" bindtap="doLogin">登录</button>
+</view>

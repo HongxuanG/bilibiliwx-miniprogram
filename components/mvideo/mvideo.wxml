@@ -1,0 +1,3 @@
+<view class="mvideo">
+    <video class="" id="videoElement"></video>
+</view>

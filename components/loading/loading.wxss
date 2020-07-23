@@ -1,0 +1,6 @@
+/* components/loading/loading.wxss */
+.loading{
+    margin: 0 auto;
+    width: 320px;
+    height: 269px;
+}

@@ -1,0 +1,67 @@
+/* pages/searchPage/searchPage.wxss */
+.search-bar{
+    box-sizing: border-box;
+    height: 50px;
+    background-color: white;
+    overflow: hidden;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.search-sug{
+    padding: 0 11px 0;
+}
+.search-sug .caption{
+    margin-top: 40px;
+}
+.search-sug .caption .caption-title{
+    margin-bottom: 21px;
+}
+.search-sug .caption .sug-content{
+
+}
+.search-sug .caption .sug-content .sug{
+    float: left;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    text-align: center;
+    line-height: 29px;
+    height: 29px;
+    padding: 0 15px;
+    margin-right: 11px;
+    margin-bottom: 8px;
+}
+.search-sug .caption .sug-content .sug text{
+    font-size: 14px;
+}
+.search-sug .caption .lishi-content{
+
+}
+.search-sug .caption .lishi-content .lishi-item{
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e7e7;
+    height: 20px;
+    line-height: 20px;
+}
+.search-sug .caption .lishi-content .lishi-item .icon-lishijilu{
+    float: left;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.search-sug .caption .lishi-content .lishi-item .lishi{
+    vertical-align: middle;
+    float: left;
+}
+.search-sug .caption .lishi-content .lishi-item .lishi text{
+
+}
+.search-sug .caption .lishi-content .lishi-item .icon-del{
+    float: right;
+    vertical-align: middle;
+}
+.search-sug .caption .delhistory{
+    font-size: 12px;
+    color: #999999;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}

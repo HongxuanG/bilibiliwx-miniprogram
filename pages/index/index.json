@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "nav-bar":"/components/navbar/navbar",
+    "videoCard":"/components/videoCard/videoCard",
+    "loading":"/components/loading/loading",
+    "cartoonCard":"/components/cartoon/cartoon"
+  },
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance":50
+}

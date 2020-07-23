@@ -1,0 +1,12 @@
+<view class="card">
+    <view class="card-image">
+        <image src="{{video.cover}}">
+            <view class="tag" wx:if="{{video.badge}}">{{video.badge}}</view>
+            <view class="number">{{video.stat.follow_view}}</view>
+        </image>
+    </view>
+    <view class="card-context">
+        <view class="card-title txt-cut">{{video.title}}</view>
+        <view class="card-page-index one-txt-cut">{{video.desc || video.index_show}}</view>
+    </view>
+</view>
