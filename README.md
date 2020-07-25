@@ -11,3 +11,5 @@
 ![image](https://github.com/HongxuanG/bilibiliwx-miniprogram/blob/master/effectpic/image7.png)
 ![image](https://github.com/HongxuanG/bilibiliwx-miniprogram/blob/master/effectpic/image8.png)
 ![image](https://github.com/HongxuanG/bilibiliwx-miniprogram/blob/master/effectpic/image9.png)
+![image](https://github.com/HongxuanG/bilibiliwx-miniprogram/blob/master/effectpic/image10.png)
+![image](https://github.com/HongxuanG/bilibiliwx-miniprogram/blob/master/effectpic/image11.png)
