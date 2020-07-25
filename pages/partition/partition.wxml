@@ -2,7 +2,7 @@
 <nav-bar></nav-bar>
 <view class="category">
     <block wx:for="{{partition}}" wx:key="index">
-        <view class="category-item">
+        <view class="category-item" data-idx="{{index}}" bindtap="onclick">
             <image src="{{item.icon}}"></image>
             <text>{{item.text}}</text>
         </view>

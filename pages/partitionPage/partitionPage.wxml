@@ -1,0 +1,12 @@
+<wxs module="tools" src="../../pages/filter/tools.wxs"></wxs>
+<nav-bar type="2" title="{{tabBar[index].partitonName}}"></nav-bar>
+<van-tabs active="{{ active }}" bind:change="onChange" animated swipeable custom-class="custom-class" tab-class="tab-class" tab-active-class="tab-active-class" nav-class="nav-class">
+    <block wx:for="{{tabBar[index].children}}" wx:key="index">
+        <van-tab title="{{item.tname}}">
+            <block wx:for="{{lists[currentIndex].archives || lists[currentIndex].list}}" wx:for-item="itm" wx:for-index="idx" wx:key="idx">
+                <classifyCard video="{{itm}}"></classifyCard>
+            </block>
+            <!-- <loading wx:if="{{lists[currentIndex].archives || lists[currentIndex].list}}"></loading> -->
+        </van-tab>
+    </block>
+</van-tabs>

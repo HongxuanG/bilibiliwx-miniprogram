@@ -77,7 +77,12 @@ Page({
             },
         ]
     },
-
+    onclick(e){
+        console.log(e);
+        wx.navigateTo({
+          url: '/pages/partitionPage/partitionPage?index='+e.currentTarget.dataset.idx,
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

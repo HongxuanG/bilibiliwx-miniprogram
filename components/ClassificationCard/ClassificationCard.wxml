@@ -1,0 +1,30 @@
+<wxs module="tools" src="../../pages/filter/tools.wxs" />
+<view class="classifyCard" bindtap="videoDetail" data-aid="{{video.aid}}">
+    <view class="video-img">
+        <image src="{{video.pic}}" lazy-load="{{true}}">
+            <view class="duration">
+                <view class="duration-time">
+                    {{tools.duration(video.duration)}}
+                </view>
+            </view>				
+        </image>
+    </view>
+    <view class="video-info">
+        <text class="title txt-cut">{{video.title}}</text>
+        <view class="up_name">
+            <text class="iconfont icon-UPzhu"></text> 
+            <text>{{video.author.name || video.owner.name}}</text>
+        </view>
+        <view class="video-msg">
+            <view class="play_num">
+                <text class="iconfont icon-play"></text>
+                <text>{{tools.viewNum(video.stat.view)}}</text>
+            </view>
+            <view class="danmu">
+                <text class="iconfont icon-danmu"></text>
+                <text>{{tools.viewNum(video.stat.danmaku)}}</text>
+            </view>
+        </view>
+    </view>
+
+</view>

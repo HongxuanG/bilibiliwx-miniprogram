@@ -8,15 +8,16 @@
         <view>
             <text>账号</text>
         </view>
-        <input type="text" placeholder="请输入B站账号"></input>
+        <input type="text" placeholder="请输入B站账号" bindinput="bindUsername" value="{{username}}"></input>
     </view>
     <view class="section password">
         <view>
             <text>密码</text>
         </view>
-        <input type="text" bindfocus="onfocus" bindblur="onblur" placeholder="请输入登录密码"></input>
+        <input type="text" bindfocus="onfocus" bindblur="onblur" password placeholder="请输入登录密码" bindinput="bindPassword" value="{{password}}"></input>
     </view>
 </view>
-<view class="button">
-    <button class="login_btn" bindtap="doLogin">登录</button>
+<view class="button" bindtap="doLogin">
+    <button class="login_btn">登录</button>
 </view>
+<captcha id="captcha" wx:if="{{loadCaptcha}}" gt="{{gt}}" challenge="{{challenge}}" offline="{{offline}}"  bindonSuccess="captchaSuccess"/>

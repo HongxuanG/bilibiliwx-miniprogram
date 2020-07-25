@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "nav-bar":"/components/navbar/navbar",
+    "loading":"/components/loading/loading",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "classifyCard":"/components/ClassificationCard/ClassificationCard"
+  },
+  "onReachBottomDistance":50
+}

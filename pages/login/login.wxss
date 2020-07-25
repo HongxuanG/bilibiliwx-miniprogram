@@ -42,7 +42,9 @@
 
 }
 .button{
-    margin-top: 24px;
+    width: 280px;
+    height: 44px;
+    margin: 24px auto 0;
 }
 .button .login_btn{
     width: 280px;

@@ -1,13 +1,14 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/partitionPage/partitionPage",
+    "pages/login/login",
     "pages/category/category",
     "pages/searchResult/searchResult",
     "pages/mine/mine",
     "pages/videoPage/videoPage",
     "pages/searchPage/searchPage",
     "pages/history/history",
-    "pages/login/login",
     "pages/partition/partition",
     "pages/logs/logs"
   ],
@@ -42,6 +43,12 @@
         "text": "我的"
       }
     ]
+  },
+  "plugins": {
+    "geetest": {
+      "version": "1.3.0",
+      "provider": "wxefa63d84fe9f64a2"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }

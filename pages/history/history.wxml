@@ -9,7 +9,7 @@
             <view class="video-info">
 				<text class="title txt-cut">{{item.video.title}}</text>
 				<view class="tag">
-					<view class="tag-box" wx:if="{{item.video.hot_desc}}">
+					<view class="tag-empty" wx:if="{{item.video.hot_desc}}">
 						<text>{{item.video.hot_desc}}</text>
 					</view>
 				</view>

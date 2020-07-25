@@ -1,0 +1,191 @@
+.classifyCard{
+    border-top: 1px solid #f4f4f4;
+    padding: 10px 0;
+    display: flex;
+    position: relative;
+    z-index: 1;
+  }
+  .classifyCard .video-img{
+    width: 129px;
+    height: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 7px;
+  }
+  .classifyCard .video-img image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .classifyCard .video-img .duration{
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    height: 15px;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+  }
+  .classifyCard .video-img .duration .duration-time{
+    line-height: 15px;
+  }
+  .classifyCard .video-info{
+    flex: 1;
+    font-size: 24rpx;
+  }
+  .classifyCard .video-info .title{
+    margin-bottom: 15px;
+    height: 30px;
+  }
+  .classifyCard .video-info .up_name{
+    font-size: 24rpx;
+    color: #979797;
+  }
+  .classifyCard .video-info .up_name .iconfont{}
+  .classifyCard .video-info .up_name text{}
+  .classifyCard .video-info .video-msg{
+    font-size: 24rpx;
+    color: #979797;
+    display: flex;
+    height: 20px;
+  }
+  .classifyCard .video-info .video-msg .play_num{
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .classifyCard .video-info .video-msg .play_num .iconfont{
+    
+  }
+  .classifyCard .video-info .video-msg .play_num text{}
+  .classifyCard .video-info .video-msg .danmu{
+    flex: 1;
+    text-align: center;
+  }
+  .classifyCard .video-info .video-msg .danmu text{
+    font-size: 24rpx; /*24rpx*/
+  }
+  .classifyCard .video-info .video-msg .transmit{
+    flex: 1;
+    text-align: right;
+  }
+  .classifyCard .video-info .video-msg .transmit .iconfont{
+    font-size: 14px;
+  }
+  .txt-cut{
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      white-space: normal !important;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  
+    /* 阿里矢量图标 */
+    .clearfix:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    /* 阿里矢量图标 */
+    @font-face {
+      font-family: 'iconfont';  /* project id 1938703 */
+      src: url('//at.alicdn.com/t/font_1938703_lfwzl8qvxae.eot');
+      src: url('//at.alicdn.com/t/font_1938703_lfwzl8qvxae.eot?#iefix') format('embedded-opentype'),
+      url('//at.alicdn.com/t/font_1938703_lfwzl8qvxae.woff2') format('woff2'),
+      url('//at.alicdn.com/t/font_1938703_lfwzl8qvxae.woff') format('woff'),
+      url('//at.alicdn.com/t/font_1938703_lfwzl8qvxae.ttf') format('truetype'),
+      url('//at.alicdn.com/t/font_1938703_lfwzl8qvxae.svg#iconfont') format('svg');
+    }
+    
+    .iconfont {
+      font-family: "iconfont" !important;
+      font-size: 16px;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .icon-danmu:before {
+      content: "\e60b";
+    }
+    
+    .icon-arrow-top:before {
+      content: "\e606";
+    }
+    
+    .icon-qingniaoxitongtubiao_xia:before {
+      content: "\e66d";
+    }
+    
+    .icon-xiazai2:before {
+      content: "\e605";
+    }
+    
+    .icon-weixin:before {
+      content: "\e60a";
+    }
+    
+    .icon-huanyihuan:before {
+      content: "\e6a6";
+    }
+    
+    .icon-lishijilu:before {
+      content: "\e604";
+    }
+    
+    .icon-del:before {
+      content: "\e608";
+    }
+    
+    .icon-remen:before {
+      content: "\e601";
+    }
+    
+    .icon-shouye:before {
+      content: "\e617";
+    }
+    
+    .icon-shoucang:before {
+      content: "\e60c";
+    }
+    
+    .icon-fanhui:before {
+      content: "\e62b";
+    }
+    
+    .icon-iconfont:before {
+      content: "\e602";
+    }
+    
+    .icon-iconfont1:before {
+      content: "\e603";
+    }
+    
+    .icon-you:before {
+      content: "\e6e4";
+    }
+    
+    .icon-bili_face:before {
+      content: "\e600";
+    }
+    
+    .icon-play:before {
+      content: "\e607";
+    }
+    
+    .icon-UPzhu:before {
+      content: "\e665";
+    }
+    
+    .icon-zhuanfa:before {
+      content: "\e609";
+    }
+    
+    

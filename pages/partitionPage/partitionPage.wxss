@@ -1,0 +1,31 @@
+/* pages/partitionPage/partitionPage.wxss */
+.custom-class{
+    height: 46px;
+    padding: 0 12px;
+}
+.nav-class{
+    height: 46px;
+}
+.nav-class .van-tabs__line{
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+.tab-class{
+    height: 26px;
+    line-height: 26px;
+    padding: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    margin: 10px 0;
+    color: #505050;
+    background-color: #fff ;
+}
+.tab-class .van-ellipsis{
+    height: 26px;
+    line-height: 26px;
+}
+.tab-active-class{
+    background-color: #f4f4f4;
+    color: #fb7299 !important;
+}
